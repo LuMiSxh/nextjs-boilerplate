@@ -1,6 +1,16 @@
 import type { NextPage } from 'next';
+import NextLink from 'next/link';
 
-import { Box, Flex, Heading, Icon, SimpleGrid, Text } from '@chakra-ui/react';
+import {
+  Box,
+  Code,
+  Flex,
+  Heading,
+  Icon,
+  Link,
+  SimpleGrid,
+  Text,
+} from '@chakra-ui/react';
 import {
   FaFile,
   FaFileAlt,
@@ -21,15 +31,21 @@ const Home: NextPage = () => {
         p={[2, 3, 4, 5]}
         flexDirection="column"
       >
-        <Heading
-          bgGradient="linear(to-l, rgba(65,129,173,1) 47%, rgba(221,75,75,1) 100%)"
-          bgClip="text"
-          fontSize={['xl', '2xl', '4xl', '6xl']}
-          fontWeight="extrabold"
-          p={1}
+        <NextLink
+          href="https://github.com/Drageast/nextjs-boilerplate"
+          passHref={true}
         >
-          Nextjs boilerplate by Drageast
-        </Heading>
+          <Link
+            as={Heading}
+            bgGradient="linear(to-l, rgba(65,129,173,1) 47%, rgba(221,75,75,1) 100%)"
+            bgClip="text"
+            fontSize={['xl', '2xl', '4xl', '6xl']}
+            fontWeight="extrabold"
+            p={1}
+          >
+            Nextjs boilerplate by Drageast
+          </Link>
+        </NextLink>
         <Text
           color="whiteAlpha.900"
           fontSize={['md', 'lg', 'xl', '2xl']}
@@ -98,6 +114,11 @@ const Home: NextPage = () => {
                 <Box display="flex" flexDirection="row" textColor="blue.700">
                   <Icon as={FaFolder} mr={[0.5, 2]} />
                   <Text>types</Text>
+                </Box>
+                {/* lib */}
+                <Box display="flex" flexDirection="row" textColor="green.700">
+                  <Icon as={FaFolder} mr={[0.5, 2]} />
+                  <Text>lib</Text>
                 </Box>
                 <Box>
                   {/* pages */}
@@ -219,6 +240,17 @@ const Home: NextPage = () => {
             </Box>
           </SimpleGrid>
         </Box>
+        <Text
+          fontSize={['sm', 'md', 'xl']}
+          textColor="whiteAlpha.900"
+          fontWeight="bold"
+        >
+          Installation:
+        </Text>
+        <Code rounded={15} fontSize={['sm', 'md']}>
+          npx create-next-app --example
+          https://github.com/Drageast/nextjs-boilerplate
+        </Code>
       </Box>
     </Flex>
   );

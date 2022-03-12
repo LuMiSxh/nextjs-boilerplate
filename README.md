@@ -2,7 +2,13 @@ This is a [Next.js](https://nextjs.org/) boilerplate project bootstrapped with [
 
 ## Getting Started
 
-First, run the development server:
+First, install this boilerplate with:
+
+```bash
+npx create-next-app --example https://github.com/Drageast/nextjs-boilerplate
+```
+
+Second, run the development server:
 
 ```bash
 npm run dev
