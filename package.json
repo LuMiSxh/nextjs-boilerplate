@@ -11,7 +11,7 @@
     "check": "prettier --check . && eslint . --ext ts --ext tsx --ext js && tsc --pretty --noEmit"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.6",
+    "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "framer-motion": "^6.2.8",

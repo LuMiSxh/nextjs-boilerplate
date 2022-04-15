@@ -249,7 +249,7 @@ const Home: NextPage = () => {
         </Text>
         <Code rounded={15} fontSize={['sm', 'md']}>
           npx create-next-app --example
-          https://github.com/Drageast/nextjs-boilerplate
+          https://github.com/Drageast/nextjs-boilerplate/tree/Chakra
         </Code>
       </Box>
     </Flex>
