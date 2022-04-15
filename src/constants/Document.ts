@@ -10,10 +10,7 @@ const Config = {
   ],
   font: {
     google: true,
-    url: 'https://fonts.googleapis.com/css2?family=Quicksand&display=swap',
-  },
-  chakra: {
-    initialColorMode: undefined,
+    url: 'https://fonts.googleapis.com/css2?family=Oswald&display=swap',
   },
 };
 

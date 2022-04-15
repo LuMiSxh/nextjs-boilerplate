@@ -2,16 +2,6 @@ import type { NextPage } from 'next';
 import NextLink from 'next/link';
 
 import {
-  Box,
-  Code,
-  Flex,
-  Heading,
-  Icon,
-  Link,
-  SimpleGrid,
-  Text,
-} from '@chakra-ui/react';
-import {
   FaFile,
   FaFileAlt,
   FaFileCode,
@@ -22,237 +12,130 @@ import {
 
 const Home: NextPage = () => {
   return (
-    <Flex w="100%" h="100%">
-      <Box
-        display="flex"
-        alignItems="center"
-        bg="gray.800"
-        rounded={10}
-        p={[2, 3, 4, 5]}
-        flexDirection="column"
-      >
+    <div className="flex items-center justify-center bg-gradient-to-r from-cblue to-cred w-min-w-screen min-h-screen">
+      <div className="flex items-center bg-gray-800 rounded-xl lg:p-8 p-5 flex-col">
         <NextLink
           href="https://github.com/Drageast/nextjs-boilerplate"
-          passHref={true}
+          passHref
         >
-          <Link
-            as={Heading}
-            bgGradient="linear(to-l, rgba(65,129,173,1) 47%, rgba(221,75,75,1) 100%)"
-            bgClip="text"
-            fontSize={['xl', '2xl', '4xl', '6xl']}
-            fontWeight="extrabold"
-            p={1}
-          >
-            Nextjs boilerplate by Drageast
-          </Link>
+          <h1 className="bg-gradient-to-l from-cblue to-cred bg-clip-text font-extrabold lg:text-6xl text-xl text-transparent p-2 cursor-pointer">Nextjs boilerplate by Drageast</h1>
         </NextLink>
-        <Text
-          color="whiteAlpha.900"
-          fontSize={['md', 'lg', 'xl', '2xl']}
-          fontWeight="bold"
-        >
-          Using Prettier, EsLint, Chakra UI and React icons
-        </Text>
-        <Box
-          display="flex"
-          flexDirection="column"
-          m={5}
-          mt={10}
-          alignItems="center"
-          justifyItems="center"
-          fontSize={['md', 'lg', '2xl']}
-          textColor="whiteAlpha.900"
-        >
-          <Text>Folder structure</Text>
-          <SimpleGrid
-            columns={[1, 2, 3]}
-            spacing={[4, 6, 8, 10]}
-            m={[2, 3, 4, 5]}
-          >
-            <Box display="flex" flexDirection="column">
-              {/* src */}
-              <Box display="flex" flexDirection="row" textColor="green.300">
-                <Icon as={FaFolderOpen} mr={[0.5, 2]} />
-                <Text>src</Text>
-              </Box>
-              <SimpleGrid
-                columns={2}
-                spacing={5}
-                mt={1}
-                fontSize={['sm', 'md', 'xl']}
-                borderColor="green.300"
-                borderWidth={1}
-                p={[1, 2]}
-                rounded={15}
-              >
-                {/* components */}
-                <Box display="flex" flexDirection="row" textColor="pink.300">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>components</Text>
-                </Box>
-                {/* constants */}
-                <Box display="flex" flexDirection="row" textColor="gray.200">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>constants</Text>
-                </Box>
-                {/* hooks */}
-                <Box display="flex" flexDirection="row" textColor="purple.600">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>hooks</Text>
-                </Box>
-                {/* modules */}
-                <Box display="flex" flexDirection="row" textColor="cyan.600">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>modules</Text>
-                </Box>
-                {/* styles */}
-                <Box display="flex" flexDirection="row" textColor="blue.300">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>styles</Text>
-                </Box>
-                {/* types */}
-                <Box display="flex" flexDirection="row" textColor="blue.700">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>types</Text>
-                </Box>
-                {/* lib */}
-                <Box display="flex" flexDirection="row" textColor="green.700">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>lib</Text>
-                </Box>
-                <Box>
-                  {/* pages */}
-                  <Box
-                    display="flex"
-                    flexDirection="row"
-                    textColor="orange.500"
-                  >
-                    <Icon as={FaFolderOpen} mr={[0.5, 2]} />
-                    <Text>pages</Text>
-                  </Box>
-                  <SimpleGrid
-                    columns={[1, 2]}
-                    spacing={[2, 3, 4, 5]}
-                    m={1}
-                    fontSize={['xs', 'sm', 'lg']}
-                    borderColor="orange.500"
-                    borderWidth={1}
-                    p={[1, 2]}
-                    rounded={15}
-                  >
-                    {/* api */}
-                    <Box
-                      display="flex"
-                      flexDirection="row"
-                      textColor="yellow.400"
-                    >
-                      <Icon as={FaFolder} mr={[0.5, 2]} />
-                      <Text>api</Text>
-                    </Box>
-                  </SimpleGrid>
-                </Box>
-              </SimpleGrid>
-            </Box>
-            <Box display="flex" flexDirection="column">
-              {/* public */}
-              <Box display="flex" flexDirection="row" textColor="blue.400">
-                <Icon as={FaFolderOpen} mr={[0.5, 2]} />
-                <Text>public</Text>
-              </Box>
-              <SimpleGrid
-                columns={[1, 2]}
-                spacing={[2, 3, 4, 5]}
-                m={1}
-                fontSize={['sm', 'md', 'xl']}
-                borderColor="blue.400"
-                borderWidth={1}
-                p={[1, 2]}
-                rounded={15}
-              >
-                {/* manifest */}
-                <Box display="flex" flexDirection="row" textColor="gray.400">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>manifest</Text>
-                </Box>
-                {/* svg */}
-                <Box display="flex" flexDirection="row" textColor="yellow.200">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>svg</Text>
-                </Box>
-                {/* images */}
-                <Box display="flex" flexDirection="row" textColor="green.200">
-                  <Icon as={FaFolder} mr={[0.5, 2]} />
-                  <Text>images</Text>
-                </Box>
-              </SimpleGrid>
-            </Box>
-            <Box display="flex" flexDirection="column">
-              {/* root */}
-              <Box
-                display="flex"
-                flexDirection="row"
-                textColor="whiteAplha.700"
-              >
-                <Icon as={FaFolderPlus} mr={[0.5, 2]} />
-                <Text>root</Text>
-              </Box>
-              <SimpleGrid
-                columns={[1, 2]}
-                spacing={[2, 3, 4, 5]}
-                m={1}
-                fontSize={['sm', 'md', 'xl']}
-                borderColor="whiteAplha.700"
-                borderWidth={1}
-                p={[1, 2]}
-                rounded={15}
-              >
-                {/* prettierrc */}
-                <Box display="flex" flexDirection="row" textColor="red.400">
-                  <Icon as={FaFile} mr={[0.5, 2]} />
-                  <Text>prettierrc</Text>
-                </Box>
-                {/* prettierignore */}
-                <Box display="flex" flexDirection="row" textColor="red.500">
-                  <Icon as={FaFile} mr={[0.5, 2]} />
-                  <Text>prettierignore</Text>
-                </Box>
-                {/* eslintrc */}
-                <Box display="flex" flexDirection="row" textColor="teal.400">
-                  <Icon as={FaFile} mr={[0.5, 2]} />
-                  <Text>eslintrc</Text>
-                </Box>
-                {/* eslintignore */}
-                <Box display="flex" flexDirection="row" textColor="teal.500">
-                  <Icon as={FaFile} mr={[0.5, 2]} />
-                  <Text>eslintignore</Text>
-                </Box>
-                {/* tsconfig */}
-                <Box display="flex" flexDirection="row" textColor="blue.400">
-                  <Icon as={FaFileCode} mr={[0.5, 2]} />
-                  <Text>tsconfig</Text>
-                </Box>
-                {/* gitignore */}
-                <Box display="flex" flexDirection="row" textColor="orange.400">
-                  <Icon as={FaFileAlt} mr={[0.5, 2]} />
-                  <Text>gitignore</Text>
-                </Box>
-              </SimpleGrid>
-            </Box>
-          </SimpleGrid>
-        </Box>
-        <Text
-          fontSize={['sm', 'md', 'xl']}
-          textColor="whiteAlpha.900"
-          fontWeight="bold"
-        >
-          Installation:
-        </Text>
-        <Code rounded={15} fontSize={['sm', 'md']}>
-          npx create-next-app --example
-          https://github.com/Drageast/nextjs-boilerplate
-        </Code>
-      </Box>
-    </Flex>
+        <h2 className="text-white lg:text-2xl text-base font-bold pt-1">Using Prettier, EsLint, Tailwindcss and React icons</h2>
+        <section className="flex flex-col m-5 mt-12 items-center justify-center lg:text-2xl text-base text-white">
+            <p>Folder structure</p>
+            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-4 lg:m-5 m-2">
+              <div className="flex flex-col">
+                {/* src */}
+                <div className="flex flex-row text-green-400">
+                    <h2><FaFolderOpen className="lg:mr-2 mr-0.5"/>src</h2>
+                </div>
+                {/* Grid for src */}
+                <div className="grid grid-cols-2 gap-5  mt-1 lg:text-xl text-sm border border-green-400 lg:p-2 p-1 rounded-lg">
+                  {/* components */}
+                  <div className="flex flex-row text-pink-300">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>components</h2>
+                  </div>
+                  {/* constants */}
+                  <div className="flex flex-row text-gray-300">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>constants</h2>
+                  </div>
+                  {/* hooks */}
+                  <div className="flex flex-row text-purple-600">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>hooks</h2>
+                  </div>
+                  {/* modules */}
+                  <div className="flex flex-row text-cyan-400">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>modules</h2>
+                  </div>
+                  {/* styles */}
+                  <div className="flex flex-row text-blue-400">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>styles</h2>
+                  </div>
+                  {/* types */}
+                  <div className="flex flex-row text-blue-600">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>types</h2>
+                  </div>
+                  {/* lib */}
+                  <div className="flex flex-row text-green-700">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>lib</h2>
+                  </div>
+                  <section>
+                    {/* pages */}
+                    <div className="flex flex-row text-orange-400">
+                      <h2><FaFolderOpen className="lg:mr-2 mr-0.5"/>pages</h2>
+                    </div>
+                    {/* Grid for pages */}
+                     <div className="grid grid-cols-2 gap-5  mt-1 lg:text-lg text-xs border border-orange-400 lg:p-2 p-1 rounded-lg">
+                        {/* api */}
+                        <div className="flex flex-row text-yellow-400">
+                          <h2><FaFolder className="lg:mr-2 mr-0.5"/>api</h2>
+                        </div>
+                     </div>
+                  </section>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                {/* public */}
+                <div className="flex flex-row text-blue-400">
+                    <h2><FaFolderOpen className="lg:mr-2 mr-0.5"/>public</h2>
+                </div>
+                {/* Grid for public */}
+                <div className="grid grid-cols-2 gap-5  mt-1 lg:text-xl text-sm border border-blue-400 lg:p-2 p-1 rounded-lg">
+                  {/* mainfest */}
+                  <div className="flex flex-row text-gray-400">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>mainfest</h2>
+                  </div>
+                  {/* svg */}
+                  <div className="flex flex-row text-yellow-200">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>svg</h2>
+                  </div>
+                  {/* images */}
+                  <div className="flex flex-row text-green-500">
+                    <h2><FaFolder className="lg:mr-2 mr-0.5"/>images</h2>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col">
+                {/* root */}
+                <div className="flex flex-row text-white">
+                    <h2><FaFolderPlus className="lg:mr-2 mr-0.5"/>root</h2>
+                </div>
+                {/* Grid for root */}
+                <div className="grid grid-cols-2 gap-5  mt-1 lg:text-xl text-sm border border-white lg:p-2 p-1 rounded-lg">
+                  {/* prettierrc */}
+                  <div className="flex flex-row text-red-400">
+                    <h2><FaFile className="lg:mr-2 mr-0.5"/>prettierrc</h2>
+                  </div>
+                  {/* prettierignore */}
+                  <div className="flex flex-row text-red-500">
+                    <h2><FaFile className="lg:mr-2 mr-0.5"/>prettierignore</h2>
+                  </div>
+                  {/* eslintrc */}
+                  <div className="flex flex-row text-teal-400">
+                    <h2><FaFile className="lg:mr-2 mr-0.5"/>eslintrc</h2>
+                  </div>
+                  {/* eslintignore */}
+                  <div className="flex flex-row text-teal-500">
+                    <h2><FaFile className="lg:mr-2 mr-0.5"/>eslintignore</h2>
+                  </div>
+                  {/* tsconfig */}
+                  <div className="flex flex-row text-blue-500">
+                    <h2><FaFileCode className="lg:mr-2 mr-0.5"/>tsconfig</h2>
+                  </div>
+                  {/* gitignore */}
+                  <div className="flex flex-row text-orange-500">
+                    <h2><FaFileAlt className="lg:mr-2 mr-0.5"/>gitignore</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section className="flex flex-col justify-center items-center">
+          <p className="font-bold text-white text-lg">Installation:</p>
+          <code className="bg-white rounded-md m-1">npx create-next-app --example https://github.com/Drageast/nextjs-boilerplate/tree/Tailwind</code>
+        </section>
+      </div>
+    </div>
   );
 };
 

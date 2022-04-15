@@ -65,4 +65,4 @@ npm run check
 yarn check
 ```
 
-This project also uses the [Chakra UI Framework](https://chakra-ui.com/) and [React icons](https://react-icons.github.io/react-icons/) for styling.
+This project also uses the [Tailwindcss](https://tailwindcss.com/) and [React icons](https://react-icons.github.io/react-icons/) for styling.

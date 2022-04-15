@@ -6,7 +6,6 @@ import Document, {
   NextScript,
 } from 'next/document';
 
-import { ColorModeScript } from '@chakra-ui/react';
 import React from 'react';
 
 import Config from '@/constants/Document';
@@ -46,11 +45,9 @@ class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>
-          {/* Chakra UI script */}
-          <ColorModeScript initialColorMode={Config.chakra.initialColorMode} />
 
           {/* Next config */}
-          <Main />
+          <Main/>
           <NextScript />
 
           {/* Configuring portals */}
