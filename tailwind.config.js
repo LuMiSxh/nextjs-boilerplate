@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        cblue: "rgba(65,129,173,1)",
-        cred: "rgba(221,75,75,1)"
-      }
+        cblue: 'rgba(65,129,173,1)',
+        cred: 'rgba(221,75,75,1)',
+      },
     },
   },
   plugins: [],
