@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) boilerplate project bootstrapped with [
 First, install this boilerplate with:
 
 ```bash
-npx create-next-app --example https://github.com/Drageast/nextjs-boilerplate
+npx create-next-app --example https://github.com/Drageast/nextjs-boilerplate/tree/Tailwind
 ```
 
 Second, run the development server:
